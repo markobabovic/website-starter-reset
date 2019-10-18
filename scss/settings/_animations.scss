@@ -1,0 +1,13 @@
+@mixin global-transition($attribute,$time) {
+    -webkit-transition: $attribute $time;
+    -moz-transition:$attribute $time;
+    -o-transition: $attribute $time;
+    transition: $attribute $time;
+}
+
+@mixin global-transition($attribute,$time) {
+    -webkit-transition: $attribute $time;
+    -moz-transition:$attribute $time;
+    -o-transition: $attribute $time;
+    transition: $attribute $time;
+}

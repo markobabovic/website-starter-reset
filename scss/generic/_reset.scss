@@ -1,0 +1,89 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: arial;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+body {
+    @include global-transition(opacity, 0.3s);
+    opacity: 0;
+    overflow-x: hidden;
+
+    &.load-done {
+        opacity: 1;
+    }
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.div-center {
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+
+.img-full {
+    width: 100%;
+}
+
+.fa, .fas, .far, .fal, .fab {
+    //font-family: fontAwesome;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-top: 0;
+}
+
+a, a:focus, a:hover, a:active{
+    color: $dark-color;
+    text-decoration: none;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: inherit;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: inherit;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: inherit;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: inherit;
+}

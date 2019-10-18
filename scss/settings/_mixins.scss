@@ -1,0 +1,75 @@
+@mixin div-center(){
+    display: block;
+    float: none;
+    margin: 0 auto;
+}
+
+@mixin img-cover($align){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: $align;
+}
+
+@mixin vertical-center(){
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+@mixin horizontal-center(){
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+@mixin both-center(){
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@mixin flex(){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;    
+}
+
+@mixin flex-wrap(){
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;   
+}
+
+@mixin flex-grow($number){
+    flex-grow: $number; 
+    -webkit-flex-grow: $number; 
+}
+
+@mixin align-items($align){
+    -webkit-align-items: $align; /* Safari 7.0+ */
+    align-items: $align;  
+}
+
+@mixin scale($value){
+    -ms-transform: scale($value); /* IE 9 */
+    -webkit-transform: scale($value); /* Safari */
+    transform: scale($value);
+}
+
+@mixin rotate($value){
+    -ms-transform: rotate($value); /* IE 9 */
+    -webkit-transform: rotate($value); /* Safari */
+    transform: rotate($value);
+}
+
+@mixin noselect(){
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

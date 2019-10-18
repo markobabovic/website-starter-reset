@@ -1,0 +1,20 @@
+@-ms-viewport{ width:device-width; }
+
+@import 'vendor/bootstrap/_bootstrap.scss';
+@import 'vendor/fontawesome/fontawesome.scss';
+
+@import 'settings/_variables.scss';
+@import 'settings/_mixins.scss';
+@import 'settings/_animations.scss';
+
+@import 'generic/reset.scss';
+
+@import 'elements/buttons.scss';
+
+@import 'components/header.scss';
+@import 'components/footer.scss';
+
+
+
+
+
