@@ -1,3 +1,4 @@
+//This already exist by default in scss
 @mixin global-transition($attribute,$time) {
     -webkit-transition: $attribute $time;
     -moz-transition:$attribute $time;
