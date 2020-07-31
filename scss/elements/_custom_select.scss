@@ -1,0 +1,119 @@
+.custom-select{
+    min-width: 88px;
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: $small-mobile){
+        min-width: 60px;
+    }
+
+    *{
+        @include noselect();
+    }
+
+    &.open-select{
+        .select-header{
+            background-color: $secondary-color-2;
+            color: $text-color;
+
+            &:after{
+                //background: url('../images/icons.png') no-repeat -536px 0px;
+            }
+        }
+
+        .select-body{
+            display: block;
+        }
+    }
+
+    .select-header{
+        font-size: 12px;
+        line-height: normal;
+        font-weight: 800;
+        padding: 10px 39px 10px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+        color: $text-color;
+
+        &:after {
+            content: "";
+            background-image: url('../images/icon-arrow_down.svg');
+            background-repeat: no-repeat;
+            width: 13px;
+            height: 6.5px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            @include vertical-center;
+            right: 10px;
+        }
+
+        @media (max-width: $screen-xs-max){
+            padding: 5px 15px;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        *{
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+        }
+
+        // &:after{
+        //     content: "";
+        //     background: url('../images/icons.png') no-repeat -536px -9px;
+        //     width: 13px;
+        //     height: 8px;
+        //     position: absolute;
+        //     right: 15px;
+        //     top: 50%;
+        //     margin-top: -4px;
+
+        //     @media (max-width: $screen-xs-max){
+        //         display: none;
+        //     }
+        // }
+    }
+
+    .select-body{
+        background-color: $secondary-color-2;
+        position: absolute;
+        width: max-content;
+        width: -moz-max-content;
+        min-width: 100%;
+        z-index: 2;
+        text-transform: uppercase;
+        left: 50%;
+        @include horizontal-center();
+        border-bottom: 1px solid $primary-color;
+        display: none;
+
+        .item{
+            width: 100%;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 12px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+
+            *{
+                font-size: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+            }
+
+            &:hover{
+                background-color: $primary-color;
+                color: $text-color;
+            }
+        }
+    }
+
+}
